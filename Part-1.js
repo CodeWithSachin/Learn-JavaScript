@@ -81,6 +81,62 @@
 // let array2 = [...array1, ...array]
 // console.log(array2)
 
+//==================== For Loop In Javascript ====================
+
+// let fruits = ["apple","mango","banana","grapes"]
+// let fruits2 = []
+// for(let i=0;i<fruits.length;i++){
+//     console.log(fruits[i])
+// }
+// for(let i=0;i<fruits.length;i++){
+//     console.log(fruits[i].toUpperCase())
+// }
+// for(let i=0;i<fruits.length;i++){
+//     fruits2.push(fruits[i].toUpperCase())
+// }
+// console.log(fruits2)
+
+//==================== While Loop In Javascript ====================
+
+// let fruits = ["apple","mango","banana","grapes"]
+// let i = 0
+// while(i<fruits.length){
+//     console.log(fruits[i]);
+//     i++
+// }
+
+//====================Do While Loop In Javascript ====================
+
+// let fruits = ["apple","mango","banana","grapes"]
+// let i = 0
+// do {
+//     console.log(fruits[i]);
+//     i++
+// }
+// while(i<fruits.length)
+
+//==================== Important Tip for Reference Data Type ====================
+    // Always use Const To create Reference Data Type, its very usefull ang 90% of developer use const to create Reference Data Type
+        // eg:
+            // const fruits = ["apple","mango","banana","grapes"]
+
+
+//=================== For Of Loop In Javascript ====================
+// for of loop --> for of loop  return the value of array.
+
+// let fruits = ["apple","mango","banana","grapes"]
+// for(fruit of fruits){
+//     console.log(fruit.toUpperCase());
+// }
+    
+//=================== For In Loop In Javascript ====================
+// for in loop --> for in loop return the index of the array.
+
+// let fruits = ["apple","mango","banana","grapes"]
+// for(index in fruits){
+//     console.log(fruits[index]);
+// }
+
 
 //==================== Object In Javascript ====================
 
@@ -259,12 +315,12 @@
 
 // ====================================Basic Hoisting ===============================
 
-// we can call the function before declaring it for eg:
+// --> we can call the function before declaring it for eg:
 // hello();
 // function hello(){
 //     console.log("hello world!")
 // }
-// but in Function Expression And Arrow Function it is not Possible, this will show the error. 
+// --> but in Function Expression And Arrow Function it is not Possible, this will show the error. 
 
 
 // ====================================Functions Inside Function===============================
@@ -293,6 +349,49 @@
 //     myFunction();
 // }
 // myApp();
+// --> accessing any value of variable from function if the variable is not present then it will check in the parent function/object for that variable and print it. this is called as lexical scope  
 
-// accessing any value of variable from function where the variable is not present then it will check 
-// in the parent function/object for that variable and print it. this is called as lexical scope  
+// ================================= Block Scope And Functional Scope =================================
+
+// --> Block Scope --> Let and Const are the Block Scope --> Declared variable by let and const can be called inside block"{}" but cannot called outside the block "{}"
+// {
+//     let firstName = "Sachin"
+//     console.log(firstName);
+// }
+// console.log(firstName);
+// {
+//     const firstName = "Sachin"
+//     console.log(firstName);
+// }
+// console.log(firstName);
+
+// --> Functional Scope --> var is the Functional Scope --> declared variable by var can be called inside block as well as ouside the block "{}".
+// {
+//     var firstName = "sachin"
+// }
+// console.log(firstName)
+// {
+//     var firstName = "sachin"
+// }
+// console.log(firstName)
+
+// ===================================== Default Parameters ==================================
+// --> before 2015 we are using following for defining default parameter --> 
+// function myApp(a, b){
+//     if(typeof b === "undefined"){
+//         b=1
+//     }
+//     return a+b;
+// }
+
+// let ans = myApp(4, 5)
+// console.log(ans)
+
+// --> but after 2015 we started using following for defining default parameter.-->
+// function myApp(a, b=1){
+//     return a+b;
+// }
+
+// let ans = myApp(4)
+// console.log(ans)
+
