@@ -395,3 +395,12 @@
 // let ans = myApp(4)
 // console.log(ans)
 
+// ======================== Rest Parameter ========================
+// --> Rest Parameter --> JavaScript Rest Parameters provides us with a way to declare a function which can take indefinite number of arguments, which are available as an array. In simple language, we can define JavaScript function with Rest Parameters which doesn't have a fixed number of parameters and can take any numbers of arguments when it is called.
+function myApp(a, b, ...c){
+    console.log("value of A is :", a);
+    console.log("value of B is :", b);
+    console.log("value of C is :", c);
+}
+
+myApp(2,3,4,5,6,7,8,9);
