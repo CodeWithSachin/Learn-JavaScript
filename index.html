@@ -1,11 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>JavaScript</title>
 </head>
+
 <body>
+<!-- 
+    <nav>
+        <div class="nav_container">
+            <a href="./index.html">
+                <img src="./Logo_small_RBK.png" alt="">
+            </a>
+            <ul class="nav_menu">
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">LogOut</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="line"></div>
+
+    <div class="container">
+        <div class="I-container">
+            <a class="left h4" href="https://www.youtube.com"> See How to Order <img src="./youtube.png" alt=""></a>
+            <div class="main">
+                <label class="left" for="left">Total Number of Image <img src="./question.png" alt=""></label>
+                <input type="number" name="total image" id="T-number" class="right">
+            </div>
+            <div class="main">
+                <label class="left" for="left">Order Name</label>
+                <input type="text" name="total image" id="O-name" class="right">
+            </div>
+            <div class="main">
+                <label class="left" for="left">Service</label>
+                <div class="right radios">
+                    <div class="i-ra">
+                        <input type="radio" name="1" id="retouch"><span>Your Retouch</span>
+                    </div>
+                    <div class="i-ra">
+                        <input type="radio" name="1" id=""><span>RE</span>
+                    </div>
+                    <div class="i-ra">
+                        <input type="radio" name="1" id=""><span>BOO/KU</span>
+                    </div>
+                    <div class="i-ra">
+                        <input type="radio" name="1" id=""><span>Custom Quote</span>
+                    </div>
+                </div>
+            </div>
+            <div class="retouch" id="toggle">
+                <div class="main toggle">
+                    <label class="left" for="left">This Order has Images with</label>
+                    <div class="right radios">
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>1 Person</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>2-8 People</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>9+ People</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <label class="left" for="left">Number of Image having 1 Person</label>
+                    <input type="text" name="total image" id="O-name" class="right">
+                </div>
+                <div class="main service">
+                    <label for="left" class="left rside">Services required <img
+                            src="./photo-camera-interface-symbol-for-button.png" alt=""></label>
+                    <div class="right radios">
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>Remove 100% of skin blemishes ($0.60)</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>Remove 100% of normal glare ($0.20)</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>Soften wrinkles ($0.20)</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>Skin softening ($0.30)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main service">
+                    <label for="left" class="left rside"><img src="./photo-camera-interface-symbol-for-button.png"
+                            alt=""></label>
+                    <div class="right radios">
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>Remove stray hairs ($0.60)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main service">
+                    <label for="left" class="left rside"><img src="./photo-camera-interface-symbol-for-button.png"
+                            alt=""></label>
+                    <div class="right radios">
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>Whiten teeth ($0.30)</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>Whiten eyes ($0.30)</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>Soften bags under eyes ($0.60)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main service">
+                    <label for="left" class="left rside"><img src="./photo-camera-interface-symbol-for-button.png"
+                            alt=""></label>
+                    <div class="right radios">
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>Eyeglass glare removal ($0.60)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <label class="left" for="left">Output Format</label>
+                    <div class="right radios">
+                        <div class="i-ra">
+                            <input type="radio" name="1" id=""><span>JPEG</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="radio" name="1" id=""><span>PNG</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="radio" name="1" id=""><span>TIFF</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="radio" name="1" id=""><span>PSD(Flatten)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <label class="left" for="left">Special Instructions</label>
+                    <textarea name="" id="" cols="10" rows="10"></textarea>
+                </div>
+                <h4 class="left h4">Add on Services</h4>
+                <div class="main">
+                    <label class="left" for="left">Online Proof</label>
+                    <div class="right radios">
+                        <div class="i-ra">
+                            <input type="radio" name="1" id=""><span>No</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="radio" name="1" id=""><span>Yes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <label class="left" for="left">Colour/Exposure Adjustments</label>
+                    <div class="right radios">
+                        <div class="i-ra">
+                            <input type="radio" name="1" id=""><span>No</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="radio" name="1" id=""><span>Yes($0.15)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main toggle">
+                    <label class="left" for="left">This Order has Images with</label>
+                    <div class="right booku">
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>BOO – View all services related to Body/clothing retouching</span>
+                        </div>
+                        <div class="i-ra">
+                            <input type="checkbox" name="1" id=""><span>KU – View all services related to Background/object retouching</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <button class=" back">Back</button>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+
     <script src="./Part-1.js"></script>
-    <script src="./Part-2.js"></script>
-    <script src="./Part-3.js"></script>
+    <!-- <script src="./Part-2.js"></script> -->
+    <!-- <script src="./Part-3.js"></script> -->
 </body>
+
 </html>
