@@ -116,9 +116,9 @@
 // while(i<fruits.length)
 
 //==================== Important Tip for Reference Data Type ====================
-    // Always use Const To create Reference Data Type, its very usefull ang 90% of developer use const to create Reference Data Type
-        // eg:
-            // const fruits = ["apple","mango","banana","grapes"]
+// Always use Const To create Reference Data Type, its very usefull ang 90% of developer use const to create Reference Data Type
+// eg:
+// const fruits = ["apple","mango","banana","grapes"]
 
 
 //=================== For Of Loop In Javascript ====================
@@ -128,7 +128,7 @@
 // for(fruit of fruits){
 //     console.log(fruit.toUpperCase());
 // }
-    
+
 //=================== For In Loop In Javascript ====================
 // for in loop --> for in loop return the index of the array.
 
@@ -404,7 +404,7 @@
 //     console.log("value of C is :", c);
 // }
 // myApp(2,3,4,5,6,7,8,9);
-    
+
 //  Eg 2
 // function addAll(...numbers){
 //     let total = 0;
@@ -484,15 +484,16 @@
 
 // ======================= MAP Method ==============================
 // --> Map method always take input as return and store the data as new array
-    // map() creates a new array from calling a function for every array element.
-    // map() calls a function once for each element in an array.
-    // map() does not execute the function for empty elements.
-    // map() does not change the original array.
+// map() creates a new array from calling a function for every array element.
+// map() calls a function once for each element in an array.
+// map() does not execute the function for empty elements.
+// map() does not change the original array.
 
 // const numbers = [1,6,8,9,0];
 // const square = function(number){
 //     return number * number
 // }
+// console.log(square);
 // const data = numbers.map((number)=>{
 //     return number*number
 // })
@@ -520,7 +521,7 @@
 //     return number%2===0;
 // })
 // console.log(evenNumbers)
-    
+
 // =========================== REDUCE Method ========================
 // The reduce() method executes a reducer function for array element.
 // The reduce() method returns a single value: the function's accumulated result.
@@ -555,9 +556,9 @@
 // console.log(totalAmount);
 
 // =========================== SORT Method ========================
-    // The sort() sorts the elements of an array.
-    // The sort() overwrites the original array.
-    // The sort() sorts the elements as strings in alphabetical and ascending order.
+// The sort() sorts the elements of an array.
+// The sort() overwrites the original array.
+// The sort() sorts the elements as strings in alphabetical and ascending order.
 // const numbers=[3,9,65,766,900,6522];
 
 // const sort = numbers.sort((a,b)=>{
@@ -633,8 +634,8 @@
 // =========================== SOME Method ========================
 // The some() method checks if any array elements pass a test (provided as a function).
 // The some() method executes the function once for each array element:
-    // If the function returns true, some() returns true and stops.
-    // If the function returns false, some() returns false and stops.
+// If the function returns true, some() returns true and stops.
+// If the function returns false, some() returns false and stops.
 // The some() method does not execute the function for empty array elements.
 // The some() method does not change the original array.
 
@@ -740,30 +741,187 @@
 // =========================== MAPS OBJECT ========================
 // --> In Object the Type of key are always in string or symbol, but In Map Object te Type of Key can be anything
 
-const person = new Map();
+// const person = new Map();
 
-person.set("Name", "Sachin");
-person.set("Age", 23);
-person.set(1, "Always number One");
-person.set(true, "Speaks true")
-person.set([1,2,3], "onetwothree")
+// person.set("Name", "Sachin");
+// person.set("Age", 23);
+// person.set(1, "Always number One");
+// person.set(true, "Speaks true")
+// person.set([1,2,3], "onetwothree")
 
-console.log(person);
+// console.log(person);
 
 // To get the value of key in Map Object
-console.log(person.get(1));
+// console.log(person.get(1));
 
 // for loop
-for(let key of person.keys()){
-    console.log(key, typeof key);
-}
+// for(let key of person.keys()){
+//     console.log(key, typeof key);
+// }
 
-// direct for of loop on Map Object
-for(let [key, value] of person){
-    console.log(key,':', value);
-}
+// // direct for of loop on Map Object
+// for(let [key, value] of person){
+//     console.log(key,':', value);
+// }
 
-// we can set key value pairs while defining Map
-const person1 = new Map([["Name", "Sachin"],["Age", 23]])
-console.log(person1);
+// // we can set key value pairs while defining Map
+// const person1 = new Map([["Name", "Sachin"],["Age", 23]])
+// console.log(person1);
 
+
+
+// =========================== CLONE USING OBJECT.ASSIGN ========================
+
+// const obj = {
+//     key1 : "item1",
+//     key2 : "item2"
+// }
+// // --> this is simple object, we can clone it by using spread operator
+// //  const obj2 = {...obj}
+// // --> but we can also use Object.assign to clone an Object
+// const obj2 = Object.assign({}, obj)
+// obj.key3 = "item3"
+// console.log(obj);
+// console.log(obj2);
+
+// =========================== OPTIONAL CHAINING ========================
+
+// const user = {
+//     name: "Sachin",
+//     address : {
+//         houseNo: 1700
+//     }
+// }
+
+// console.log(user?.address?.houseNo);
+
+
+// =========================== METHODS ========================
+// --> Method is simply function inside object.
+// -------------- THIS METHOD ---------------
+// --> the value of this is the name of the variable assigned to the block element
+// const person = {
+//     name: "Sachin",
+//     age: 23,
+//     info : function(){
+//         console.log(`person name is ${person.name}`);
+//     }
+// }
+
+// person.info();
+// console.log(person.name);
+
+// another example
+
+// function info(){
+//     console.log(`person name is ${this.name}`)
+// }
+
+// const person = {
+//     name: "Sachin",
+//     info: info
+// }
+
+// person.info()
+
+
+// =========================== CALL(), APPLY(), BIND() IN JAVASCRIPT ========================
+
+// ------------ call() ------------
+// --> call() is use to call a function, we can change the value of this keyword while calling it with the other variable name
+// function about(hobby, singer, ...extra){
+//     console.log(`Name of the person is ${this.Name}  Age is ${this.Age} ${hobby} ${singer} ${extra}`);
+// }
+
+// const person1 = {
+//     Name: "Sachin",
+//     Age: 23,
+//     info: about
+// }
+// const person2 = {
+//     Name: "Pawan",
+//     Age: 23,
+// }
+
+// person1.info.call(person2, "cricket", "jassie gill")
+
+// // ---------------- apply() ---------------
+
+// person1.info.apply(person1, ["cricket", "shreya ghosal", "tennis","pawan"])
+
+// // -------------- bind() --------------
+
+// const func = person1.info.bind(person2, "music", "asha bhosle")
+
+// func()
+// =========================== DON'T DO THIS MISTAKE ========================
+
+// const person = {
+//     name: "Sachin",
+//     age: 23,
+//     info: function () {
+//         console.log(this.name);
+//     }
+// }
+
+// const funct = person.info
+
+// funct()
+
+// =========================== ARROW FUNCTION WITH THIS KEYWORD ========================
+// --> arrow function don't have any this keyword, if we declare this in arrow function then they will take the value of parent block's this value
+
+// const person = {
+//     name: "Sachin",
+//     age: 23,
+//     info: () => {
+//         console.log(this.name);
+//     }
+// }
+
+// person.info.call(person);
+
+
+// =========================== CREATE FUNCTION FOR MULTIPLE OBJECTS ========================
+
+// --> for single object
+// const user = {
+//     firstName: "Sachin",
+//     lastName: "Singh",
+//     age: 23,
+//     email: "sachin.singh@mileseducation.com",
+//     address: "911, kanakia, andheri, maharashtra",
+//     about(){
+//         console.log(`User name is ${this.firstName} ${this.lastName}`);
+//     },
+//     is18(){
+//         return this.age >= 18;
+//     }
+// }
+
+
+// --> for multiple object
+// function createUser(firstName, lastName, age, email, address){
+//     const user = {};
+
+//     user.firstName = firstName,
+//     user.lastName = lastName,
+//     user.age = age,
+//     user.email = email,
+//     user.address = address,
+//     user.about = function(){
+//         console.log(`User name is ${this.firstName} ${this.lastName}`);
+//     },
+//     user.is18 = function(){
+//         return this.age >= 18;
+//     }
+//     return user
+//     // console.log(user);
+// }
+
+// const user1 = createUser("Pawan", "Jadhav", 24, "pj@test.com", "ghatkopar")
+
+// console.log(user1);
+
+
+// =========================== OPTIONAL CHAINING ========================
