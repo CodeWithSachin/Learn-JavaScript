@@ -924,4 +924,35 @@
 // console.log(user1);
 
 
-// =========================== OPTIONAL CHAINING ========================
+// =========================== STORE METHODS IN DIFFERENT OBJECT ========================
+// const objectMethod = {
+//     about : function(){
+//         return `User name is ${this.firstName} ${this.lastName}`;
+//     },
+//     is18 : function(){
+//         return this.age >= 18;
+//     }
+// }
+
+// function createUser(firstName, lastName, age, email, address){
+//     const user = {};
+
+//     user.firstName = firstName;
+//     user.lastName = lastName;
+//     user.age = age;
+//     user.email = email;
+//     user.address = address
+//     user.about = objectMethod.about;
+//     user.is18 = objectMethod.is18;
+//     return user
+// }
+
+// const user1 = createUser("Pawan", "Jadhav", 24, "pj@test.com", "ghatkopar")
+// const user2 = createUser("Sachin", "Singh", 24, "ss@test.com", "NSP")
+
+// console.log(user2);
+
+
+// =========================== __proto__ OR [[prototype]] ========================
+
+
