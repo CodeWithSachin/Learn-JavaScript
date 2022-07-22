@@ -915,11 +915,14 @@
 //     user.is18 = function(){
 //         return this.age >= 18;
 //     }
-//     return user
-//     // console.log(user);
-// }
+// //     return user
+// //     // console.log(user);
+// // }
 
-// const user1 = createUser("Pawan", "Jadhav", 24, "pj@test.com", "ghatkopar")
+// const user0 = createUser("Pawan", "Jadhav", 24, "pj@test.com", "ghatkopar")
+// const user6 = createUser("Pawan", "Jadhav", 24, "pj@test.com", "ghatkopar")
+// const user3 = createUser("Pawan", "Jadhav", 24, "pj@test.com", "ghatkopar")
+// const user4 = createUser("Pawan", "Jadhav", 24, "pj@test.com", "ghatkopar")
 
 // console.log(user1);
 
@@ -950,9 +953,84 @@
 // const user1 = createUser("Pawan", "Jadhav", 24, "pj@test.com", "ghatkopar")
 // const user2 = createUser("Sachin", "Singh", 24, "ss@test.com", "NSP")
 
-// console.log(user2);
+// console.log(user2.about());
 
 
 // =========================== __proto__ OR [[prototype]] ========================
+// --> we use __proto__ call an object in different object as a Substitute OR Reference, Eg: if we have define a object as __proto__ of an object and when we get the key of object which is not present in main object then the Javasript we search in the proto object and print it.
+
+
+// const objectMethod = {
+//     about : function(){
+//         return `User name is ${this.firstName} ${this.lastName}`;
+//     },
+//     is18 : function(){
+//         return this.age >= 18;
+//     }
+// }
+
+// function createUser(firstName, lastName, age, email, address){
+//     const user = Object.create(objectMethod);
+
+//     user.firstName = firstName;
+//     user.lastName = lastName;
+//     user.age = age;
+//     user.email = email;
+//     user.address = address;
+
+//     return user
+// }
+
+// const user1 = createUser("pawan", "jadhav", 24, "ss@test.com", "NSP");
+
+// console.log(user1.about());
+
+
+
+// =========================== prototype ========================
+// --> Funcition provide us many Properties like call(), apply(), bind(), etc it also provide prototype properties. prototype properties are only provide by function
+// --> PROTOTYPE is free space which is provide by function.
+// --> function can also act as Object, we can set and get key value pairs.
+
+// function hello(){
+//     console.log("hello duniya!");
+// }
+
+// hello.prototype.new = "apni duniya";
+
+// console.log(hello.prototype.new);
+
+
+// function createUser(firstName, lastName, age, email, address) {
+//     const user = Object.create(createUser.prototype);
+
+//     user.firstName = firstName;
+//     user.lastName = lastName;
+//     user.age = age;
+//     user.email = email;
+//     user.address = address;
+
+//     return user
+// }
+
+// createUser.prototype.about = function(){
+//     return `${this.firstName} ${this.lastName}'s Age is ${this.age}`;
+// }
+
+// createUser.prototype.is18 = function(){
+//     return this.age >= 18;
+// }
+
+
+// const user = createUser("Sachin", "Singh", 23, "ss@text.com", "nsp");
+
+// console.log(user.about());
+
+
+
+// =========================== NEW Keyword ========================
+
+
+
 
 
