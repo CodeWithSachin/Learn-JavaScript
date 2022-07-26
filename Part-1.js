@@ -1152,3 +1152,4 @@
 // console.log(user)
 // user.fullName = "Pawan Jadhav"
 // console.log(user)
+// console.log(Admin.is18());
