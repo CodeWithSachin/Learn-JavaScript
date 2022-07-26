@@ -320,7 +320,7 @@
 // function hello(){
 //     console.log("hello world!")
 // }
-// --> but in Function Expression And Arrow Function it is not Possible, this will show the error. 
+// --> but in Function Expression And Arrow Function it is not Possible, this will show the error.
 
 
 // ====================================Functions Inside Function===============================
@@ -349,7 +349,7 @@
 //     myFunction();
 // }
 // myApp();
-// --> accessing any value of variable from function if the variable is not present then it will check in the parent function/object for that variable and print it. this is called as lexical scope  
+// --> accessing any value of variable from function if the variable is not present then it will check in the parent function/object for that variable and print it. this is called as lexical scope
 
 // ================================= Block Scope And Functional Scope =================================
 
@@ -376,7 +376,7 @@
 // console.log(firstName)
 
 // ===================================== Default Parameters ==================================
-// --> before 2015 we are using following for defining default parameter --> 
+// --> before 2015 we are using following for defining default parameter -->
 // function myApp(a, b){
 //     if(typeof b === "undefined"){
 //         b=1
@@ -724,7 +724,7 @@
 // numbers.add(["item1", "item2"])
 // console.log(numbers)
 
-// --> In above example Set will add the two same array  because the memory location of both array are different. 
+// --> In above example Set will add the two same array  because the memory location of both array are different.
 // --> from JavaScript perspective if two array having same data then also it will define as different because the memory location are different.
 
 // ------------ HAS METHOD IN SET ------------
@@ -1030,7 +1030,125 @@
 
 // =========================== NEW Keyword ========================
 
+// 1--> new keyword will create an empty Object set "this"= { }
+// 2--> store key value pair in objecct and retturn "this"
+// 2--> it automatically set __proto__ , which we create by Object.create().
+
+// function CreateUser(firstName, lastName, age, email, address) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//     this.email = email;
+//     this.address = address;
+// }
+
+// CreateUser.prototype.about = function () {
+//     return `${this.firstName} ${this.lastName}'s Age is ${this.age}`;
+// }
+
+// CreateUser.prototype.is18 = function () {
+//     return this.age >= 18;
+// }
 
 
+// const user = new CreateUser("Sachin", "Singh", 23, "ss@text.com", "nsp");
+
+// console.log(user.about());
+
+// // ------------ hasOwnProperty -------------
+// // --> hasOwnProperty give us the value of only Object not from either __proto__ nor prototype
+
+// for (let key in user) {
+//     if (user.hasOwnProperty(key)) {
+//         console.log(key);
+//     }
+// }
+
+// =========================== More About Prototype ========================
+
+// let arr = [1,2,4]
+
+// let arr1 = new Array(1,2,3)
+
+// console.log(arr.prototype);
+// console.log(arr1);
+
+// function hello(){
+//     console.log("hello");;
+// }
+// hello()
+
+// hello.prototype = []
+
+// console.log(hello.prototype);
 
 
+// =========================== CLASS ========================
+// --> In Javascript classes are fake.
+// --> To call the construuctor of the class as a function, we use "new" keyword.
+// --> We can use class by using class keyword and inside class there is constructor function.
+// --> We can define method inside class after condtructor function.
+
+// class CreateUser{
+//     constructor(firstName, lastName, age) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//     }
+//     about(){
+//         return `${this.firstName} ${this.lastName}'s Age is ${this.age}`;
+//     }
+//     is18(){
+//         return this.age >= 18;
+//     }
+// }
+
+// const user = new CreateUser("Sachin", "Singh", 23)
+
+// console.log(user);
+
+
+// =========================== EXTENDS KEYWORD ========================
+// --> shows inheritence between parent and clild class
+
+// =========================== SUPER KEYWORD ========================
+// --> super keyword is use to take parameter of super class in sub class
+
+// =========================== GETTERS & SETTERS ========================
+// --> GET : To use method as property while calling it just put "get" before declaring method.
+// --> SET : To change the value of the Key of object after calling it we use "set" keyword before the method.
+
+// =========================== Static keyword for method and properties ========================
+// --> Static keyword is used with methods and properties inside class.
+// --> with the help of static keyword, we can make method and properties only accessable with class. it cant be access by Object/Instacnce.
+ 
+// class Admin{
+//     constructor(firstName, lastName, age) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//     }
+//     get about(){
+//         return `${this.firstName} ${this.lastName}'s Age is ${this.age}`;
+//     }
+//     static is18(){
+//         return this.age >= 18;
+//     }
+//     set fullName(fullName){
+//         const [firstName, lastName] = fullName.split(" ");
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+// }
+// class User extends Admin{
+//     constructor( firstName, lastName, age,userId){
+//         super(firstName, lastName, age);
+//         this.userId = userId;
+//     }
+// }
+
+// const user = new User("pawan","kaushal",24, 1700)
+// // console.log(user.firstName)
+// console.log(user)
+// user.fullName = "Pawan Jadhav"
+// console.log(user)
