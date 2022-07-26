@@ -1,3 +1,5 @@
+-=-=-==-=-=-=-=-=-PART 1 START=--==-=-=-=-=-=-=-
+
 =================== JavaScript Beginning to Mastery Syllabus ===================
 
 JavaScript vs EcmaScript 
@@ -107,6 +109,10 @@ Super keyword
 Method overriding
 Getters and setters
 Static methods and properties
+-=-=-==-=-=-=-=-=-PART 1 END=--==-=-=-=-=-=-=-
+
+
+-=-=-==-=-=-=-=-=-PART 2 START=--==-=-=-=-=-=-=-
 
 =================== How JavaScript Works ===================
 Global Execution context
