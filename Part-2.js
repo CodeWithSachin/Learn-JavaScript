@@ -1,5 +1,12 @@
 // ============================== How Javascript Work ==============================
 /*
+
+console.log(this);
+console.log(window);
+console.log(firstName);
+var firstName = "Sachin";
+
+
 CODE => COMPILE => EXECUTE
 
 Compilation Phase --> Tokenizing/Lexing
@@ -17,6 +24,18 @@ Compilation Phase --> Tokenizing/Lexing
 --> Code Execution Phase --> In Javascript code execute inside "Execution Context" OR "Global Execution Context"
 
 --> Global Execution Context --> Creation Phase
-                             --> Code Execution Phase   
+                             --> Code Execution Phase  
+    
+--> Global Memory --> window = {} --> window is an object provided by browser
+                  --> this = window
+                  --> firstName = undefined --> In above code variable is called before declaring it.
 
+--> 
+                             
+
+--> JavaScript is Single Threaded & Synchronous Programming Language.
+        --> Synchronous --> Unless the first line of code is not Executed, the next line of code will not execute.
+
+--> 
 */
+
