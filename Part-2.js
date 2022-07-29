@@ -124,6 +124,8 @@ Compilation Phase --> Tokenizing/Lexing
 
 // ============================= Closures =============================
 
+//  Example 1
+
 // function outer(firstName, lastName){
 //         function inner(){
 //                 console.log(firstName, lastName);
@@ -134,4 +136,53 @@ Compilation Phase --> Tokenizing/Lexing
 
 // answer();
 
-// -->
+// --> When we Function returns a Function, then it will return with all the present variable in lexical environment. 
+// --> Or we can say that, when function returns then it will take the local memory while returning.
+
+// Example 2
+
+// function hello(x){
+//         var a = "varA";
+//         const b = "varB";
+        
+//         return function(){
+//                 console.log(a,b,x);
+//         }
+// }
+
+// const app = hello("varX");
+
+// app();
+
+// Example 3
+
+// function myFunc(power){
+//         return function(number){
+//                 return number ** power;
+//         }
+// }
+// const square = myFunc(2);
+// const app = square(5);
+// console.log(app);
+
+// Example 4
+
+// function closuresApplication(){
+//         var counter = 0;
+//         return function(){
+//                 if(counter < 1){
+//                         console.log("This Function is Called");
+//                         counter++;
+//                 }else{
+//                         console.log(`This Function is Called ${counter + 1} Time.`);
+//                 }
+//         }
+// }
+
+// const app = closuresApplication();
+
+// app();
+// app();
+
+// ============================= Closures =============================
+
