@@ -184,5 +184,32 @@ Compilation Phase --> Tokenizing/Lexing
 // app();
 // app();
 
-// ============================= Closures =============================
+// ============================= HOW TO USE JS FILE IN HTML =============================
+// use <script> in <Head>
+// use <script> in <Body>
+// use async attribute in <script>
+// use defer attribute in <script> --> this is best
+
+// ============================= DOM (Document Object Modal) =============================
+// --> Browser provide "window" object and "document" object inside it.
+
+// getElementById --> We can use getElementById to select element only by Id.
+
+// querySelector --> We can use getElementById to select element by class name, id name and tag name.
+
+// querySelectorAll --> We can use getElementById to select all the element by class name and tag name.
+
+// textContent --> To get All the Text value Store in a Element even which is Hidden
+
+// innerText --> To get all the visible Text value store in Element.
+
+// =========================== change style with js ===========================
+
+// const heading = document.querySelector("#done")
+// console.log(heading);
+
+// heading.style.border = "20px solid #4ad23c"
+
+// =========================== Get and Set Attributes ===========================
+
 
