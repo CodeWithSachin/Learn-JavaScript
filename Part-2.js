@@ -212,4 +212,6 @@ Compilation Phase --> Tokenizing/Lexing
 
 // =========================== Get and Set Attributes ===========================
 
+// getAttribute --> to get the value of the attribute
+// setAttribute --> to new attribute and its value.
 
